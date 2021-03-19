@@ -1,0 +1,110 @@
+﻿<Window x:Class="Autopilot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Autopilot"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="275" Width="700">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200px"/>
+            <ColumnDefinition Width="200px"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox Name="player1Role" SelectionChanged="player1Role_SelectionChanged" Grid.Row="0" Grid.Column="0">
+            <ComboBoxItem>DPS</ComboBoxItem>
+            <ComboBoxItem>Enchanter</ComboBoxItem>
+            <ComboBoxItem>Tank</ComboBoxItem>
+            <ComboBoxItem>Healer</ComboBoxItem>
+            <ComboBoxItem>Squishy</ComboBoxItem>
+            <ComboBoxItem>Shaman</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="player2Role" SelectionChanged="player2Role_SelectionChanged" Grid.Row="1" Grid.Column="0">
+            <ComboBoxItem>DPS</ComboBoxItem>
+            <ComboBoxItem>Enchanter</ComboBoxItem>
+            <ComboBoxItem>Tank</ComboBoxItem>
+            <ComboBoxItem>Healer</ComboBoxItem>
+            <ComboBoxItem>Squishy</ComboBoxItem>
+            <ComboBoxItem>Shaman</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="player3Role" SelectionChanged="player3Role_SelectionChanged" Grid.Row="2" Grid.Column="0">
+            <ComboBoxItem>DPS</ComboBoxItem>
+            <ComboBoxItem>Enchanter</ComboBoxItem>
+            <ComboBoxItem>Tank</ComboBoxItem>
+            <ComboBoxItem>Healer</ComboBoxItem>
+            <ComboBoxItem>Squishy</ComboBoxItem>
+            <ComboBoxItem>Shaman</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="player4Role" SelectionChanged="player4Role_SelectionChanged" Grid.Row="3" Grid.Column="0">
+            <ComboBoxItem>DPS</ComboBoxItem>
+            <ComboBoxItem>Enchanter</ComboBoxItem>
+            <ComboBoxItem>Tank</ComboBoxItem>
+            <ComboBoxItem>Healer</ComboBoxItem>
+            <ComboBoxItem>Squishy</ComboBoxItem>
+            <ComboBoxItem>Shaman</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="player5Role" SelectionChanged="player5Role_SelectionChanged" Grid.Row="4" Grid.Column="0">
+            <ComboBoxItem>DPS</ComboBoxItem>
+            <ComboBoxItem>Enchanter</ComboBoxItem>
+            <ComboBoxItem>Tank</ComboBoxItem>
+            <ComboBoxItem>Healer</ComboBoxItem>
+            <ComboBoxItem>Squishy</ComboBoxItem>
+            <ComboBoxItem>Shaman</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="player6Role" SelectionChanged="player6Role_SelectionChanged" Grid.Row="5" Grid.Column="0">
+            <ComboBoxItem>DPS</ComboBoxItem>
+            <ComboBoxItem>Enchanter</ComboBoxItem>
+            <ComboBoxItem>Tank</ComboBoxItem>
+            <ComboBoxItem>Healer</ComboBoxItem>
+            <ComboBoxItem>Squishy</ComboBoxItem>
+            <ComboBoxItem>Shaman</ComboBoxItem>
+        </ComboBox>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <ProgressBar x:Name="player1Health" Height="20" Foreground="Red"/>
+            <ProgressBar x:Name="player1Mana" Height="10" Foreground="Blue"/>
+            <ProgressBar x:Name="player1Pet" Height="10" Foreground="Green"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <ProgressBar x:Name="player2Health" Height="20" Foreground="Red"/>
+            <ProgressBar x:Name="player2Mana" Height="10" Foreground="Blue"/>
+            <ProgressBar x:Name="player2Pet" Height="10" Foreground="Green"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <ProgressBar x:Name="player3Health" Height="20" Foreground="Red"/>
+            <ProgressBar x:Name="player3Mana" Height="10" Foreground="Blue"/>
+            <ProgressBar x:Name="player3Pet" Height="10" Foreground="Green"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <ProgressBar x:Name="player4Health" Height="20" Foreground="Red"/>
+            <ProgressBar x:Name="player4Mana" Height="10" Foreground="Blue"/>
+            <ProgressBar x:Name="player4Pet" Height="10" Foreground="Green"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1">
+            <ProgressBar x:Name="player5Health" Height="20" Foreground="Red"/>
+            <ProgressBar x:Name="player5Mana" Height="10" Foreground="Blue"/>
+            <ProgressBar x:Name="player5Pet" Height="10" Foreground="Green"/>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="1">
+            <ProgressBar x:Name="player6Health" Height="20" Foreground="Red"/>
+            <ProgressBar x:Name="player6Mana" Height="10" Foreground="Blue"/>
+            <ProgressBar x:Name="player6Pet" Height="10" Foreground="Green"/>
+        </StackPanel>
+        <TextBlock Name="player1HealthChange" Grid.Row="0" Grid.Column="2"/>
+        <TextBlock Name="player2HealthChange" Grid.Row="1" Grid.Column="2"/>
+        <TextBlock Name="player3HealthChange" Grid.Row="2" Grid.Column="2"/>
+        <TextBlock Name="player4HealthChange" Grid.Row="3" Grid.Column="2"/>
+        <TextBlock Name="player5HealthChange" Grid.Row="4" Grid.Column="2"/>
+        <TextBlock Name="player6HealthChange" Grid.Row="5" Grid.Column="2"/>
+        <TextBlock Name="player1Casting" Grid.Row="0" Grid.Column="3"/>
+    </Grid>
+</Window>
